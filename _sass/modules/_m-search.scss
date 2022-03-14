@@ -1,0 +1,159 @@
+.m-search {
+  width: 100%;
+  background-color: $white;
+  transition: opacity .2s;
+  background-color: transparent;
+
+  @media screen and (min-width: $screen-m) {
+    width: 50%;
+    font-family: $font-family-primary;
+    font-size: $font-size-medium;
+    font-weight: $font-weight-regular;
+  }
+
+  .js--search-mobile {
+    @media screen and (min-width: $screen-m) {
+      display: none;
+    }
+  }
+
+  > .js--search-desktop {
+    display: none;
+
+    @media screen and (min-width: $screen-m) {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      width: 80%;
+      max-width: rem(736px);
+      margin: 0 auto;
+    }
+  }
+
+  .js--open-search-mb {
+    margin-top: rem(80px);
+    display: block;
+
+    @media screen and (min-width: $screen-s) {
+      width: 100%;
+      margin: rem(80px) auto;
+      display: block;
+    }
+
+    @media screen and (min-width: $screen-m) {
+      display: none;
+    }
+  }
+
+  input {
+    @extend %clean-button-or-input;
+    cursor: pointer;
+    color: $white;
+    border: 1px solid rgba(#fff, .2);
+
+    @media screen and (min-width: $screen-m) {
+      padding-left: rem(20px);
+      padding-right: rem(20px);
+      height: rem(73px);
+      max-height: rem(73px);
+    }
+  }
+
+  @media screen and (min-width: $screen-m) {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: rem(50px) rem(80px) rem(60px);
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: rem(50px);
+
+    input {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      max-width: rem(736px);
+      border-radius: 0;
+      text-transform: none;
+      line-height: 1.8em;
+      font-size: rem(18px);
+      font-family: $font-family-primary;
+      font-weight: $font-weight-light;
+      text-align: left;
+
+      &::-ms-clear {
+        display: none;
+      }
+
+      @include placeholder() {
+        color: #fefffb;
+        font-size: rem(18px);
+        text-transform: none;
+        text-align: left;
+        font-style: italic;
+        font-weight: $font-weight-light;
+        opacity: .5;
+        font-family: $font-family-primary;
+      }
+    }
+
+    .search-box.visible {
+      border-top: 1px solid $color-8;
+      border-left: 1px solid $color-8;
+      border-bottom: 1px solid $color-8;
+      position: absolute;
+      bottom: rem(-10px);
+      left: 0;
+      right: 0;
+      z-index: 2;
+      background-color: $white;
+      transform: translatey(100%);
+      overflow-y: scroll;
+    }
+
+
+    .search-area {
+      width: 100%;
+      background-color: $white;
+      border-bottom: 1px solid $color-8;
+      transition: 0.2s;
+
+      a, &.no-results > span {
+        display: inline-block;
+        width: 100%;
+        padding: rem(20px) rem(40px);
+        color: $font-color-3;
+        font-size: rem(16px);
+      }
+
+      &.highlight {
+        background-color: $color-6;
+      }
+
+      span span {
+        font-weight: 700;
+      }
+
+      &:hover{
+        background-color: $color-6;
+      }
+    }
+  }
+}
+
+.icon-search {
+  @extend %centery;
+  right: 10%;
+  width: rem(20px);
+  height: rem(20px);
+  margin-top: rem(-7px);
+  fill: $white;
+
+  @media screen and (min-width: $screen-m) {
+    right: rem(20px);
+    margin-top: 0;
+    width: rem(25px);
+    height: rem(25px);
+  }
+}

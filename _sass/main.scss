@@ -1,0 +1,106 @@
+
+@charset "utf-8";
+@import 'normalize.scss';
+@import 'chosen.min.scss';
+@import 'slick.scss';
+@import 'slick-theme.scss';
+
+@import
+  "settings",
+  "env",
+  "helpers",
+  "icons",
+
+  //GOAL16
+  "base/text",
+  "base/general",
+
+  "base/form",
+
+  "layout/l-toolbar",
+  "layout/l-aside-content",
+  "layout/l-footer",
+  "layout/l-header",
+  "layout/l-presentation",
+  "layout/l-main-container",
+  "layout/l-blog",
+
+  "layout/l-selectors",
+  "layout/l-compare-selectors",
+
+  // GOAL16
+  "layout/grid",
+  "layout/l-map",
+  "layout/l-dashboard",
+  "layout/l-highlight",
+  "layout/l-share",
+  "layout/l-target-list",
+  "layout/l-welcome",
+  "layout/l-banner",
+  "layout/l-explore",
+  "layout/l-grid",
+  "layout/l-legend",
+  "layout/l-content",
+  "layout/l-target-card",
+  "layout/l-about-menu",
+
+
+  "modules/m-site-navigation",
+  "modules/m-modal-window",
+  "modules/m-search",
+  "modules/m-social-share",
+  "modules/m-markdown",
+  "modules/m-pagination",
+  "modules/m-share-window",
+  "modules/m-mobile-menu",
+  "modules/m-mobile-search",
+  "modules/m-highlight",
+  "modules/m-map-breadcrumbs",
+  "modules/m-selector",
+  "modules/m-post",
+
+
+  //GOAL16
+  "modules/m-aside-compare",
+  "modules/m-data-target",
+  "modules/m-dashboard",
+  "modules/m-card--indexes",
+  "modules/m-dashboard-target",
+  "modules/m-dashboard-indicators",
+  "modules/m-breadcrumbs",
+  "modules/m-selectors",
+  "modules/m-target-report",
+  "modules/m-map-controls",
+  "modules/m-static-content",
+  "modules/m-pop-up",
+  "modules/m-list-countries",
+  "modules/m-card--indicators",
+  "modules/m-legend",
+  "modules/m-dashboard-mb-handlers",
+
+  "components/c-button",
+  "components/c-share-shortcut",
+  "components/c-title",
+  "components/c-main-title",
+  "components/c-subtitle",
+  "components/c-title-underline",
+  "components/c-block-title",
+  "components/c-section-title",
+  "components/c-search",
+  "components/c-brand",
+  "components/c-share",
+  "components/c-download",
+  "components/c-switcher",
+  "components/c-selector",
+  "components/c-score-table",
+  "components/c-shortener-button",
+  "components/c-target-card",
+  "components/c-target-name",
+  "components/c-title-popup",
+  "components/c-indicator-metadata",
+  "components/c-indicator-name",
+
+
+  "states",
+
+  "print";

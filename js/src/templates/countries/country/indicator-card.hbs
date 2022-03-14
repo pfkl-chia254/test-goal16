@@ -1,0 +1,86 @@
+<div class="card-container">
+
+  <div class="m-card--indicators">
+    <h3 class="card-title">IAEG Global Indicators</h3>
+
+    {{#if officialIndicators}}
+      <ul class="indicator-list" data-iso="{{ iso }}">
+        {{#each officialIndicators}}
+          <li class="indicator-item">
+            <div class="c-indicator-details">
+              <a class="c-indicator-name" href="{{ ../siteurl }}/data/?indicator={{ indicator_slug }}">{{ indicator_code }} {{ indicator_title }}</a>
+              <div class="c-indicator-metadata">
+                <span>Score range:
+                  {{#if worst_score }}
+                    {{ worst_score }} (worst) -
+                  {{else}}
+                    {{#unless best_score}}
+                      -
+                    {{/unless}}
+                  {{/if}}
+                  {{#if best_score }}
+                    {{ best_score }} (best)
+                  {{/if}}
+                </span>
+                {{#if units}}<span> {{ units }}</span>{{/if}}
+                {{#if year }}<span> Last update {{ year }}</span>{{/if}}
+              </div>
+            </div>
+            <span class="indicator-score">
+              {{#if literalScore}}
+                {{ literalScore }}
+              {{else}}
+                {{comma score }} {{#if score}}{{ units_abbr }} {{/if}}
+              {{/if}}
+            </span>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <span class="no-indicators">No IAEG Global indicators for this target</span>
+    {{/if}}
+  </div>
+
+  <div class="m-card--indicators -complementary">
+    <h3 class="card-title">Complementary Global Indicators</h3>
+
+    {{#if shadowIndicators}}
+      <ul class="indicator-list" data-iso="{{ iso }}">
+        {{#each shadowIndicators}}
+          <li class="indicator-item">
+            <div class="c-indicator-details">
+              <a class="c-indicator-name" href="{{ ../siteurl }}/data/?indicator={{ indicator_slug }}">{{ indicator_code }} {{ indicator_title }}</a>
+              <div class="c-indicator-metadata">
+                <span>Score range:
+                  {{#if worst_score }}
+                    {{ worst_score }} (worst) -
+                  {{else}}
+                    {{#unless best_score}}
+                      -
+                    {{/unless}}
+                  {{/if}}
+                  {{#if best_score }}
+                    {{ best_score }} (best)
+                  {{/if}}
+                </span>
+                {{#if units}}<span> {{ units }}</span>{{/if}}
+                {{#if year }}<span> Last update {{ year }}</span>{{/if}}
+              </div>
+            </div>
+            <span class="indicator-score">
+              {{#if literalScore}}
+                {{ literalScore }}
+              {{else}}
+                {{comma score }} {{#if score}}{{ units_abbr }} {{/if}}
+              {{/if}}
+            </span>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <span class="no-indicators">No Complementary Global Indicators for this target</span>
+    {{/if}}
+
+  </div>
+
+</div>

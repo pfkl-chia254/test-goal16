@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    <div id="welcome-container" class="l-welcome">
+      <div class="welcome-content">
+        <div class="wrap">
+          <h1 class="text-heading-underline">
+            <img src="{{ site.baseurl }}/img/logo/goal16_logo_ver_neg.svg" alt="logo Goal16">
+          </h1>
+          {{ content }}
+          <div class="link-container">
+            <a href="{{ site.baseurl }}/map" class="c-button -primary">get started</a>
+          </div>
+          <!-- <p class="-advise">{{ page.advise }}</p> -->
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var SITEURL = '{{ site.baseurl }}' || null;
+    </script>
+    <script src="js/main_bundle.js"></script>
+  </body>
+
+</html>

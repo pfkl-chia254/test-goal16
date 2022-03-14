@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+    {% include icons.html %}
+
+    <div class="l-main-container">
+      {% include header.html %}
+
+      {% include breadcrumbs.html %}
+
+      <div class="l-banner -section-2 -topsection-compare">
+
+        <div class="wrap">
+
+          <h1 class="c-section-title -light">{{ page.title }}</h1>
+          <p class="text text-banner-m">{{ page.intro-text }}</p>
+        </div>
+      </div>
+
+      <div id="content"></div>
+
+      {% include modules/share_module.html %}
+
+      <div class="l-highlight -crosseling-map">
+        <div class="wrap">
+          <div class="m-highlight">
+            <h2 class="c-block-title text-big-title">
+              {{ page.crosseling-module-title }}
+            </h2>
+            <p class="-highlighted text-banner-m">
+              {{ page.crosseling-module-text }}
+            </p>
+            <a href="{{ site.baseurl }}/map" class="c-button -primary">explore</a>
+          </div>
+        </div>
+      </div>
+
+      {% include footer.html %}
+
+    </div>
+    <script>
+      var SITEURL = '{{ site.baseurl }}' || null;
+    </script>
+    <script src="{{ site.baseurl }}/js/main_bundle.js"></script>
+  </body>
+
+</html>

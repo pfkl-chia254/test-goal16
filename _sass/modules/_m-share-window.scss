@@ -1,0 +1,33 @@
+.m-share-window {
+  h2 {
+    display: none;
+    text-align: center;
+  }
+  .share-toolbar {
+    width: 100%;
+
+    svg {
+      display: none;
+    }
+
+    @media screen and (min-width: $screen-s) {
+      display: flex;
+      justify-content: center;
+    }
+
+    &.-no-print {
+      .js--print {
+        display: none;
+      }
+    }
+
+    &.-no-download {
+      width: 25%;
+      min-width: rem(100px);
+
+      .js--download {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+$buckets: 'bucket-1', 'bucket-2', 'bucket-3', 'bucket-4', 'bucket-5';
+$colors: color100, color75, color50, color25, color0;
+$bucket-border: $bucket-border-1, $bucket-border-2, $bucket-border-3, $bucket-border-4, $bucket-border-5;
+
+.m-legend {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .text {
+    font-size: rem(8px);
+    font-family: $font-family-primary;
+    text-transform: uppercase;
+    margin-right: rem(5px);
+
+    @media screen and (min-width: $screen-l) {
+      display: inherit;
+      font-size: rem($font-size-xxsmall);
+      margin-right: rem(40px);
+    }
+
+    &:last-child {
+      margin-right: 0;
+      margin-left: rem(5px);
+
+      @media screen and (min-width: $screen-l) {
+        margin-left: rem(40px);
+      }
+    }
+
+    span {
+      margin-right: rem(5px);
+    }
+  }
+
+  p {
+    color: $font-color-7;
+    font-size: rem(10px);
+
+    @media screen and (min-width: 768px) {
+      font-size: rem($font-size-xsmall);
+    }
+  }
+
+  .buckets {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bucket {
+    display: inline-block;
+    width: rem(25px);
+    height: rem(25px);
+    border-radius: 50%;
+    margin-right: rem(3px);
+    line-height: rem(25px);
+    color: $font-color-7;
+    font-size: rem($font-size-xxsmall);
+    text-align: center;
+
+    @media screen and (min-width: 768px) {
+      width: rem(35px);
+      height: rem(35px);
+      line-height: rem(35px);
+      margin-right: rem(10px);
+    }
+
+    @media screen and (min-width: $screen-l) {
+      width: rem(40px);
+      height: rem(40px);
+      margin-right: rem(15px);
+      line-height: rem(37px);
+      color: $white;
+      font-size: rem($font-size-xsmall);
+    }
+
+    @for $i from 1 through length($buckets) {
+      &.#{nth($buckets, $i)} {
+        background-color: #{nth($colors, $i)};
+        background-image: url('#{$baseUrl}/img/patterns/#{nth($colors, $i)}.png');
+        border: 1px solid #{nth($bucket-border, $i)}
+      }
+    }
+
+    &.bucket-5 {
+      margin-right: 0;
+
+      @media screen and (min-width: 768px) {
+        color: $font-color-7;
+      }
+    }
+  }
+
+  .literal {
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+}

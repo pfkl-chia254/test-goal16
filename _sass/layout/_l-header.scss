@@ -1,0 +1,135 @@
+$header-height-desktop: rem(80px);
+$header-height: rem(80px);
+
+.l-header {
+  z-index: 20;
+  transition: transform 0.5s ease;
+  position: fixed;
+  top: -70px;
+  left: 0;
+  right: 0;
+  padding-left: rem(18px);
+  padding-right: rem(18px);
+
+  height: $header-height;
+  margin: 0 auto;
+
+  background-color: $white;
+  border-bottom: 1px solid $light-grey;
+  overflow: hidden;
+
+  &.is-map{
+    max-width: rem(1402px);
+  }
+
+  &.hide {
+    transform: translate(0, 0);
+  }
+
+  &.show {
+    transform: translate(0, 70px);
+  }
+
+  @media screen and (min-width: $screen-s) {
+    padding-left: rem($wrap-padding-tablet);
+  }
+
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    height: rem(80px);
+    padding-left: rem($wrap-padding-desktop);
+    padding-right: rem(0px);
+  }
+
+  @media screen and (min-width: $screen-l) {
+    height: rem(80px);
+  }
+
+  @media screen and (min-width: $screen-xl) {
+    padding-left: rem($wrap-padding-desktop-xl);
+  }
+
+  .l-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: $white;
+    float: left;
+    max-width: rem(200px);
+    width: rem(200px);
+    height: rem(80px);
+
+    .logo-link {
+      img{
+        max-width: rem(200px);
+        width: rem(200px);
+        height: rem(80px);
+        max-height: rem(80px);
+      }
+    }
+
+    @media screen and (min-width: $screen-l) {
+      height: $header-height-desktop;
+    }
+  }
+
+  .l-menus {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+
+    @media screen and (min-width: 768px) {
+      // width: 100%;
+      height: rem(80px);
+    }
+
+    .menus-wrapper {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        width: 100%;
+        position: static;
+        display: block;
+        background-color: transparent;
+        transform: translatex(0);
+      }
+    }
+
+    .scroll-wrapper {
+      @media screen and (min-width: 768px) {
+        position: static;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow-y: hidden;
+        padding: 0;
+      }
+    }
+
+    .btn-mobile-menu {
+      height: $header-height;
+
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+
+      svg {
+        width: rem(16px);
+        height: rem(16px);
+        fill: $color-5;
+      }
+
+      @media screen and (min-width: 768px) {
+        height: rem(80px);
+      }
+
+      @media screen and (min-width: $screen-l) {
+        height: $header-height-desktop;
+      }
+    }
+  }
+}

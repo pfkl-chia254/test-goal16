@@ -1,0 +1,41 @@
+$backgrounds-highlight: 'crosseling-map', 'crosseling-compare', 'crosseling-about';
+
+.l-highlight {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: rem(100px) 0;
+  background-color: #ccc;
+  // min-height: rem(600px);
+  .wrap{
+    padding-left: rem(21px);
+    padding-right: rem(21px);
+    @media screen and (min-width: $screen-s) {
+      padding: 0px;
+    }
+  }
+
+
+  @for $i from 1 through length($backgrounds-highlight) {
+    &.-#{nth($backgrounds-highlight, $i)}{
+      background-image: url('#{$baseUrl}/img/crosseling/#{nth($backgrounds-highlight, $i)}.jpg');
+      background-size: cover;
+      background-position: center;
+      background-blend-mode: overlay;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        // background-color: rgba(14, 29, 42, 0.4);
+      }
+    }
+  }
+
+  @media screen and (min-width: $screen-s) {
+    padding: 0px;
+  }
+}

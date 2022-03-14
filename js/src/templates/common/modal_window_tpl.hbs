@@ -1,0 +1,62 @@
+{{#if isBase}}
+  <div id="infowindow-base">
+    <div class="m-modal-window {{#if isMapDisclaimer}}-disclaimer{{/if}}">
+      <div class="modal-wrapper {{#if isShare}}-share_window{{/if}}">
+        <div class="btn-close-modal close-icon"><svg class="icon icon-close"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use></svg></div>
+        <div class="modal-container">
+          <div id="modal-content" class="modal-content">
+            {{{content}}}
+          </div>
+        </div>
+      </div>
+      <div class="modal-background"></div>
+    </div>
+  </div>
+{{/if}}
+
+{{#if isIndicator}}
+  <div id="info-infowindow info-window-secondary">
+    <div class="-indicator">
+      <div class="info-wrapper">
+        {{#if data.title}}
+          <h2 class="c-title-popup -big-modal">{{data.title}}</h2>
+        {{/if}}
+        {{#if data.description}}
+          <p>{{{data.description}}}</p>
+        {{else}}
+          <p>No data for this indicator</p>
+        {{/if}}
+
+        <div class="indicator-metadata">
+          <ul>
+            <li>
+              <span class="key-item">Source: </span>{{#if data.source_name }} <a target="_blank" href="{{ data.source_link }}">{{ data.source_name }} {{else}}-{{/if}}</a>
+            </li>
+            <li>
+              <span class="key-item">Worst score: </span><span>{{#if data.worst_score}}{{ comma data.worst_score }}{{ else }} - {{/if}}</span>
+              <span class="key-item">Best score: </span><span>{{#if data.best_score}}{{ comma data.best_score }}{{ else }} - {{/if}}</span>
+              <span class="key-item">Units: </span><span>{{#if data.units }}{{ data.units }}{{ else }}-{{/if}}</span>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+{{/if}}
+
+{{#if isMapDisclaimer}}
+  <h3 class="c-title-underline -left">Explore available data</h3>
+  {{#if isMobile}}
+    <p>Click on a target or an indicator in the menu on the bottom to see which countries have data. Map shading refers to data availability and coverage, not actual values, whether positive or negative.</p>
+    <p>You can then click on a specific country to see more information and available data.</p>
+    <p>For more information about the indicators and data sources, go to DATA section.</p>
+    <p>To explore all available data for a specific country, got to COUNTRIES section.</p>
+  {{else}}
+    <p>Click on a target or an indicator in the menu on the left side to see which countries have data. Map shading refers to data availability and coverage, not actual values, whether positive or negative.</p>
+    <p>You can then click on a specific country to see more information and available data.</p>
+    <p>For more information about the indicators and data sources, click on the DATA tab in the top menu.</p>
+    <p>To explore all available data for a specific country, click on the COUNTRIES tab in the top menu.</p>
+  {{/if}}
+{{/if}}

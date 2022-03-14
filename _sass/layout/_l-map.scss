@@ -1,0 +1,35 @@
+.l-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: $bg-color-1;
+  border-top: rem(1px) solid $light-grey;
+
+  @media screen and (min-width: $screen-m) {
+    top: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    left: $dashboard-width;
+    transition: .2s ease;
+
+    .is-dashboard-close & {
+      left: 0;
+    }
+  }
+
+  @media screen and (min-width: $screen-l) {
+    top: 0;
+  }
+
+  .leaflet-bar {
+    border: 0px;
+  }
+
+  .leaflet-popup-tip-container{
+    display: none;
+  }
+}
