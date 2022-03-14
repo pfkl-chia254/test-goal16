@@ -1,0 +1,96 @@
+.m-card--indexes {
+  width: 100%;
+  padding: rem(40px) rem(15px) rem(35px);
+
+  background-color: $color-6;
+
+  & + & {
+    // border-bottom: rem(1px) solid $border-3;
+  }
+
+  .index-description {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 100%;
+
+    > .img {
+      display: inline-block;
+
+      width: 183px;
+      height: rem(60px);
+
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    > .name {
+      margin-top: rem(20px);
+      max-width: 90%;
+      font-family: $font-family-secondary;
+      font-size: rem(20px);
+      font-weight: $font-weight-regular;
+      letter-spacing: rem(.3px);
+      line-height: 1.4;
+
+      cursor: pointer;
+
+      @media screen and (min-width: $screen-s) {
+        margin-top: rem(30px);
+
+        font-size: $font-size-large;
+      }
+    }
+
+    > .organization {
+      width: 100%;
+      margin-top: rem(10px);
+
+      font-family: $font-family-primary;
+      font-size: $font-size-small;
+      font-weight: $font-weight-regular;
+      line-height: 1.90;
+      color: $font-color-6;
+
+      @media screen and (min-width: $screen-s) {
+        font-size: $font-size-normal;
+        line-height: 1.75;
+      }
+    }
+
+    &:hover {
+      .name {
+        color: $color-4;
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @include col(6);
+    display: flex;
+    justify-content: space-between;
+    width: calc(50% - 1px);
+    padding: rem(50px) rem(85px);
+    max-width: 50%;
+    padding: rem(50px) rem(76px) rem(72px)rem(74px);
+    // border-bottom: rem(1px) solid $border-3;
+
+    .img {
+      height: rem(40px);
+      margin-bottom: rem(28px);
+    }
+
+    &:nth-child(odd) {
+      // border-right: rem(1px) solid $border-3;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      // border-right: rem(1px) solid #e5eaea;
+      justify-content: flex-start;
+      max-width: 50%;
+    }
+  }
+}

@@ -1,0 +1,195 @@
+.c-button {
+  display: inline-block;
+  padding: rem(15px) rem(45px);
+  width: 100%;
+
+  font-family: $font-family-primary;
+  font-size: $font-size-xsmall;
+  font-weight: $font-weight-bold;
+  letter-spacing: rem(.6px);
+  text-align: center;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: 0.1s;
+
+  & + & {
+    margin-top: rem(10px);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: auto;
+
+    & + & {
+      margin-top: 0;
+    }
+  }
+
+  &.-primary {
+    color: $white;
+    background-color: $dark-aqua;
+
+    @media screen and (min-width: 768px) {
+      &:hover {
+        color: $white;
+        background-color: rgba($dark-aqua, .9);
+      }
+    }
+
+  }
+
+  &.-secondary {
+    color: $dark-aqua;
+
+    border: rem(1px) solid $dark-aqua;
+
+    @media screen and (min-width: 768px) {
+      &:hover {
+        color: $white;
+        border-color: transparent;
+        background-color: $dark-aqua;
+      }
+    }
+
+    &.-compare {
+      color: $white;
+      background-color: $dark-aqua;
+
+      &:hover {
+        background-color: rgba($dark-aqua, .9);
+      }
+    }
+  }
+
+  // margin given by every button but first one
+  @media screen and (min-width: 768px) {
+    & + & {
+      margin: rem(25px) 0 0;
+    }
+  }
+
+  &.-small {
+    width: 50%;
+    padding: rem(15px) 0;
+    margin-top: 0;
+
+    @media screen and (min-width: 768px) {
+      width: auto;
+      padding: rem(15px) rem(45px);
+    }
+  }
+
+  &.-disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  &.-active {
+    color: $font-color-6;
+    background-color: rgba(128, 147, 151, .1);
+    border: solid rem(1px) rgba(128, 147, 151, .4);
+  }
+
+  @media screen and (min-width: $screen-s) {
+    & + & {
+      margin: 0 0 0 rem(16px);
+    }
+
+    letter-spacing: rem(.7px);
+  }
+}
+
+.btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  margin-right: rem(20px);
+  margin-top: rem(20px);
+  margin-bottom: rem(20px);
+  cursor: pointer;
+  width: rem(18px);
+  height: rem(18px);
+
+  &.-color-1 {
+    svg {
+      fill: $color-6;
+    }
+  }
+
+  &.-btn-close-modal{
+    color: $font-color-3;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin: rem(40px);
+  }
+}
+
+.c-btn-share {
+  position: absolute;
+  top: rem(135px);
+  right: rem(15px);
+  z-index: 20;
+  width: rem(40px);
+  height: rem(40px);
+  line-height: rem(35px);
+  border-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border: 0;
+  background-color: $white;
+  box-shadow: 0 0 rem(8px) 0 rgba(7, 51, 56, 0.3);
+  color: $color-5;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    width: rem(15px);
+    height: rem(15px);
+    margin: auto;
+
+    fill: $color-5;
+  }
+
+  &:hover {
+    > svg {
+      fill: $font-color-11;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    top: rem(140px);
+    right: rem(30px);
+  }
+}
+
+.btn-info {
+  float: right;
+  align-self: flex-end;
+
+  width: rem(16px);
+  height: rem(16px);
+  margin-left: rem(10px);
+
+  border-radius: 50%;
+
+  .icon-info {
+    width: rem(16px);
+    height: rem(16px);
+
+    fill: $color-5;
+
+    &:hover {
+      fill: $tree-green;
+    }
+  }
+
+  &.-right {
+    float: right;
+  }
+}

@@ -1,0 +1,64 @@
+.l-dashboard {
+  position: absolute;
+  top: $button-height;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  background-color: $white;
+  transition: .2s ease;
+  transform: translatey(0);
+  border-top: rem(1px) solid $light-grey;
+
+  .is-dashboard-close & {
+    transform: translatey(100%);
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: $dashboard-width;
+    background-color: #fff;
+    transition: .2s ease;
+
+    .is-dashboard-close & {
+      transform: translatex(-100%);
+    }
+  }
+}
+
+.btn-toogle-dashboard {
+  display: none;
+  position: absolute;
+  right: rem(-32px);
+  top: 0;
+  z-index: 2;
+  width: rem(32px);
+  height: rem(32px);
+  background-color: $color-1;
+
+  &:after {
+    content: "";
+    @include arrow(5px, $white, 2px, -45deg);
+    transition: .2s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .is-dashboard-close & {
+    &:after {
+      transform: translate(-50%, -50%) rotate(-225deg);
+    }
+  }
+}

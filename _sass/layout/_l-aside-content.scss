@@ -1,0 +1,47 @@
+.l-aside-content {
+  background-color: $white;
+
+  .wrap {
+    padding: 0;
+  }
+
+  .btn.-secondary {
+    margin-top: rem(30px);
+  }
+}
+
+
+.l-aside-compare {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  background-color: $fountain-blue;
+  background-image: url('#{$baseUrl}/img/cover-pages/bg_lines.svg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: auto 100%;
+  color: $white;
+
+  .c-title-underline {
+    color: $white;
+    margin-bottom: 1rem;
+  }
+
+  @media screen and (min-width:$screen-s) {
+    padding: 4rem 0;
+  }
+
+  .image-compare-banner {
+    text-align: center;
+
+    > * {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .c-button {
+    width: auto;
+    background-color: $dark-aqua;
+    color: $white;
+    font-weight: bold;
+  }
+}

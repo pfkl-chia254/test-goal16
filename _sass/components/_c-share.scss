@@ -1,0 +1,67 @@
+.c-share {
+
+  p {
+    margin-top: rem(25px);
+    font-size: $font-size-xsmall;
+    font-weight: $font-weight-regular;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-align: center;
+    /*review*/
+    @media screen and (min-width: $screen-s) {
+      margin-top: rem(50px);
+    }
+  }
+
+  .link-box {
+    position: relative;
+    width: 100%;
+    margin-top: rem(25px);
+    text-align: left;
+    @media screen and (min-width: $screen-s) {
+      margin-top: rem(58px);
+    }
+  }
+
+  .url {
+    @include ellipsis-x(100%);
+    -webkit-appearance: none;
+    width: 100%;
+    margin-bottom: rem(10px);
+    padding: rem(16px) rem(10px);
+    font-family: $font-family-primary;
+    color: $font-color-6;
+    font-size: $font-size-xsmall;
+    font-weight: $font-weight-regular;
+    line-height: 1.67;
+    height: rem(65px);
+    border: 1px solid $color-3;
+    //To avoid zoom behaviour
+    font-size: rem(16px);
+
+    @media screen and (min-width: $screen-s) {
+      width: calc(100% - 21%);
+      height: rem(65px);
+      margin: 0;
+      border-right: 0;
+      border-radius: 0;
+      font-size: $font-size-xsmall;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  .btn-copy {
+    padding: rem(25px) rem(45px);
+
+    @media screen and (min-width: $screen-s) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 21%;
+      padding: rem(25px) 0;
+    }
+  }
+}

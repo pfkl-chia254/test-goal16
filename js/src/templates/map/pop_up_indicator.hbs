@@ -1,0 +1,42 @@
+<div class="m-popup">
+  <button class="btn-close">
+    <svg class="icon icon-close">
+      <use xlink:href="#icon-close"></use>
+    </svg>
+  </button>
+  <div class="wrapper">
+
+    <a href="{{ siteurl }}/countries/?iso={{iso}}"><h1 class="c-title-popup -small">{{country.name}}</h1></a>
+    {{#each indicators}}
+      <div class="data">
+        <p>Score range:
+          {{#if worst_score }}
+            {{ worst_score }} (worst) -
+          {{else}}
+            {{#unless best_score}}
+              -
+            {{/unless}}
+          {{/if}}
+          {{#if best_score }}
+            {{ best_score }} (best)
+          {{/if}}
+        </p>
+        <p>Units: {{units}}</p>
+        <p>Last update: {{year}}</p>
+      </div>
+      <div class="score c-score-popup">
+        {{#if literalScore}}
+          {{ literalScore }}
+        {{else}}
+          {{comma score }} {{#if score}} <span class="units">{{ units_abbr }}</span> {{/if}}
+        {{/if}}
+      </div>
+    {{/each}}
+    <div class="links">
+      <a href="{{ siteurl }}/countries/?iso={{country.iso}}">visit country page > </a>
+      <a href="{{ siteurl }}/compare/?isoA={{country.iso}}">compare to others > </a>
+    </div>
+
+  </div>
+</div>
+<div id="popup-background"></div>

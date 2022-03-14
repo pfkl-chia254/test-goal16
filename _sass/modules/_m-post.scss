@@ -1,0 +1,318 @@
+$sections-padding: .5rem .5rem .5rem 0;
+
+%properties-font {
+  font-family: $font-family-secondary;
+  font-size: rem(12px);
+  color: $font-color-1;
+  letter-spacing: 0.3px;
+  line-height: 1;
+}
+
+%title-font {
+  font-family: $font-family-primary;
+  font-size: rem(24px);
+  line-height: 1.4;
+  color: $font-color-1;
+  font-weight: 500;
+
+  @media screen and (min-width: 768px) {
+    font-size: rem(30px);
+  }
+}
+
+
+.m-post {
+  padding: 0;
+  // text-align: center;
+  // padding: rem(70px) 0;
+  height: 100%;
+  border-bottom: 1px solid $silver;
+
+  a.reports-post {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.5rem;
+
+    @media screen and (min-width: 768px) {
+      padding-bottom: 0;
+    }
+
+  }
+
+  .news-thumbnail {
+
+    &.-reports {
+      width: 30%;
+    }
+
+    .img-placeholder {
+      padding-top: 56%;
+      background-color: $light-grey;
+      // background-image: url('#{$baseUrl}/img/blog/promoInteriores-Blog.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      &.-reports {
+        padding-top: 142%;
+      }
+    }
+  }
+
+  .news-details, .events-details {
+    margin: 1rem 0;
+
+    > * {
+      margin-bottom: 1rem;
+    }
+
+    .-date {
+      font-family: $font-family-primary;
+      font-size: rem(12px);
+      line-height: 1;
+      color: $font-color-7;
+
+      &.events  {
+        font-size: rem(16px);
+        color: $dark-aqua;
+        font-weight: 700;
+
+        @media screen and (min-width: 768px) {
+          font-size: rem(18px);
+        }
+      }
+    }
+
+    .-title {
+      font-family: $font-family-title;
+      font-size: rem(18px);
+      color: $font-color-6;
+      font-weight: $font-weight-bold;
+
+      @media screen and (min-width: 768px) {
+        font-size: rem(24px);
+      }
+    }
+
+    .-summary {
+      font-family: $font-family-primary;
+      font-size: $font-size-small;
+      color: $font-color-12;
+
+      @media screen and (min-width: 768px) {
+        font-size: $font-size-normal;
+      }
+    }
+
+    .-link {
+      font-size: $font-size-small;
+      color: $fountain-blue;
+      font-weight: 700;
+
+      &:hover{
+        text-decoration: underline;
+      }
+
+      &.events {
+        color: $dark-aqua;
+      }
+
+      &.reports {
+        color: $ball-blue;
+      }
+
+      @media screen and (min-width: 768px) {
+        font-size: $font-size-normal;
+      }
+    }
+
+    &.-reports {
+      width: 70%;
+      padding: 1rem 2rem;
+    }
+  }
+
+  .-summary {
+    p {
+      line-height: 1.25rem;
+    }
+  }
+
+  &.-list {
+    text-align: center;
+  }
+
+  a {
+    font-size: inherit;
+    color: inherit;
+  }
+
+  .c-title-underline {
+    @media screen and (min-width: $screen-m) {
+      max-width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  //  .properties {
+  //   display: flex; display: -ms-box;
+  //   flex-direction: column;
+  //   align-items: flex-start;
+  //   padding-bottom: rem(15px);
+
+  //    .category {
+  //     margin-bottom: rem(25px);
+  //     margin-right: rem(20px);
+  //     text-transform: uppercase;
+  //     font-family: $font-family-secondary;
+  //     font-size: rem(12px);
+  //     color: $font-color-1;
+
+  //     @media screen and (min-width: $screen-m) {
+  //       margin-bottom: 0;
+  //     }
+  //   }
+  // }
+
+  .details {
+    text-align: center;
+    margin-bottom: rem(25px);
+
+    @media screen and (min-width: $screen-m) {
+      margin-bottom: rem(10px);
+    }
+
+    .author {
+      font-family: $font-family-primary;
+      font-size: rem(12px);
+      line-height: 1;
+      color: $font-color-3;
+    }
+
+    .date {
+      font-family: $font-family-primary;
+      font-size: rem(12px);
+      line-height: 1;
+      color: $font-color-7;
+    }
+  }
+
+  .title {
+    margin-bottom: rem(25px);
+
+    h3 {
+      @extend %title-font;
+      position: relative;
+      display: inline-block;
+      font-size: rem(24px);
+    }
+
+    &.-underlined {
+      padding-bottom: 1.5rem;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left:0;
+        bottom: 0;
+        width: 3rem;
+        height: 3px;
+
+        background-color: $color-4;
+      }
+    }
+
+    @media screen and (min-width: $screen-m) {
+      margin-bottom: rem(30px);
+    }
+
+    h3 {
+      font-size: rem(30px);
+    }
+  }
+
+  .image {
+    height: 24rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin: rem(20px) 0;
+
+    @include veil(rgba($bg-color-2, 0.45));
+
+    @media screen and (min-width: $screen-m) {
+      margin: rem(50px) 0 rem(30px);
+    }
+  }
+
+  .content {
+
+    @media screen and (min-width: $screen-m) {
+      max-width: 80%;
+      // margin: 0 auto;
+    }
+
+    @media screen and (min-width: $screen-l) {
+      max-width: 70%;
+      // margin: 0 auto;
+    }
+
+    @media screen and (min-width: $screen-xl) {
+      max-width: 60%;
+      // margin: 0 auto;
+    }
+
+  }
+
+  .-list & {
+
+    .title {
+
+      h3 {
+        line-height: inherit;
+        font-size: inherit;
+
+        a {
+          @extend %title-font;
+          color: $font-color-3;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-4;
+          }
+        }
+      }
+    }
+  }
+
+  &.-light {
+
+     .properties  .category,
+     .details  .author,
+     .details  .date,
+     .title h3 a,
+     .content p {
+      color: $font-color-2;
+    }
+
+     .title a:hover {
+      color: $font-color-2 !important;
+      text-decoration: underline;
+    }
+
+    .category:hover {
+      // color: $font-color-hover;
+    }
+  }
+
+  @media screen and (min-width: $screen-m) {
+    border-bottom: 0;
+
+     .properties {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@media print {
+
+  .l-footer,
+  .l-menus,
+  .l-highlight,
+  .l-share,
+  .no-printable,
+  .m-breadcrumbs,
+  .btn-info,
+  .icon-close,
+  .icon-open_arrow,
+  .c-button,
+  .js--icon-open,
+  .js--icon-close,
+  .btn-drop-down:after {
+    display: none !important;
+  }
+
+  .l-banner:before {
+    display: none !important;
+    background-image: none;
+  }
+
+  .c-section-title {
+    font-size: rem(30px);
+  }
+
+  //MAP
+  .l-explore {
+    top: rem(80px);
+  }
+
+  .l-dashboard {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 300px;
+
+    .is-dashboard-close & {
+      transform: translatex(-100%);
+    }
+  }
+
+  .l-legend {
+    right: 1.875rem;
+    bottom: 2.5rem;
+    left: 335px;
+
+    .is-dashboard-close & {
+      left: rem(35px);
+    }
+  }
+
+  .leaflet-top {
+    display: none;
+    visibility: hidden;
+  }
+
+  .leaflet-bottom {
+    right: 1.875rem;
+    padding: 0;
+    bottom: 0.625rem;
+  }
+
+  .c-btn-share {
+    display: none;
+  }
+
+  //COUNTRY PAGE
+  .c-target-card .card-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: rem(30px);
+  }
+
+  .m-card--indicators {
+    width: 48%;
+  }
+
+  //ABOUT
+  .l-grid.-partners {
+    display: flex;
+    flex-wrap: wrap;
+    border-top: 0.0625rem solid #e5eaea;
+    border-bottom: 0.0625rem solid #e5eaea;
+  }
+
+  .m-card--indexes {
+    max-width: 50%;
+    border-left: 0.0625rem solid #e5eaea;
+  }
+
+  //INFOWINDOW
+  .m-modal-window {
+    display: none;
+  }
+
+}
