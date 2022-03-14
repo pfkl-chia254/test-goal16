@@ -3,13 +3,13 @@
 title: Goal16
 description: Goal16 dashboard
 
-url: "http://www.sdg16.org/"
+# url: "http://www.sdg16.org/"
 
 # Develop and Production
 baseurl: ''
 
 # Staging
-# baseurl: '/goal16'
+baseurl: '/goal16'
 
 plugins: [jekyll-paginate]
 paginate: 25
