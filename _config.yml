@@ -1,0 +1,235 @@
+# Site settings
+
+title: Goal16
+description: Goal16 dashboard
+
+url: "http://www.sdg16.org/"
+
+# Develop and Production
+baseurl: ''
+
+# Staging
+# baseurl: '/goal16'
+
+plugins: [jekyll-paginate]
+paginate: 25
+paginate_path: "news/page:num"
+
+collections:
+- organizations
+
+# Build settings
+markdown: kramdown
+
+exclude: ['scripts', 'node_modules', 'vendor']
+
+# prose.io
+prose:
+  rooturl: ''
+  siteurl: 'http://www.sdg16.org/'
+  media: 'img'
+  ignore:
+    - _config.yml
+    - _config_dev.yml
+    - /_layouts
+    - /_includes
+    - /js
+    - /_sass
+    - /_site
+    - /blog/categories.html
+    - /blog/tags.html
+    - /scripts
+    - /_organizations
+    - /data
+    - /map
+    - /compare
+    - /countries
+    # - /events
+    # - /reports
+    - /css
+    - .editorconfig
+    - .gitignore
+    - .jekyll-metadata
+    - .ruby-version
+    - .travis.yml
+    - Gemfile
+    - Gemfile.lock
+    - favicon.ico
+    - Gruntfile.js
+    - package.json
+    - README.md
+    - CNAME
+    - useful-info.txt
+    - android-icon-36x36.png
+    - android-icon-48x48.png
+    - android-icon-72x72.png
+    - android-icon-96x96.png
+    - android-icon-144x144.png
+    - android-icon-192x192.png
+    - apple-icon-57x57.png
+    - apple-icon-60x60.png
+    - apple-icon-72x72.png
+    - apple-icon-76x76.png
+    - apple-icon-114x114.png
+    - apple-icon-120x120.png
+    - apple-icon-144x144.png
+    - apple-icon-152x152.png
+    - apple-icon-180x180.png
+    - apple-icon-precomposed.png
+    - apple-icon.png
+    - ms-icon-144x144.png
+    - ms-icon-150x150.png
+    - ms-icon-310x310.png
+    - ms-icon-70x70.png
+    - favicon-16x16.png
+    - favicon-32x32.png
+    - favicon-96x96.png
+    - manifest.json
+    - robots.txt
+  metadata:
+    news:
+      - name: layout
+        field:
+          element: "hidden"
+          label: "layout"
+          value: news/post
+      - name: "published"
+        field:
+          element: 'hidden'
+          value: true
+      - name: title
+        field:
+          element: "text"
+          label: "title"
+      - name: date
+        field:
+          element: "text"
+          label: "date"
+          placeholder: YYYY-MM-DD HH:MM:SS
+      - name: author
+        field:
+          element: "text"
+          label: "author"
+      - name: summary
+        field:
+          element: "text"
+          label: "summary"
+      - name: image
+        field:
+          element: "text"
+          label: cover image
+          placeholder: "example.jpg (upload image to img/news with the same name)"
+          value:
+      - name: category
+        field:
+          element: "text"
+          label: category
+          placeholder: "add only one category"
+          value:
+    _organizations:
+      - name: name
+        field:
+          element: "text"
+          label: "name"
+      - name: "published"
+        field:
+          element: 'hidden'
+          value: true
+      - name: logo
+        field:
+          element: "text"
+          label: "logo"
+          placeholder: "example.jpg"
+          value:
+      - name: link
+        field:
+          element: "text"
+          label: "link"
+      - name: description
+        field:
+          element: "text"
+          label: "description"
+    events:
+      - name: layout
+        field:
+          element: "hidden"
+          label: "layout"
+          value: events/post
+      - name: "published"
+        field:
+          element: 'hidden'
+          value: true
+      - name: title
+        field:
+          element: "text"
+          label: "title"
+      - name: date
+        field:
+          element: "text"
+          label: "date"
+          placeholder: YYYY-MM-DD HH:MM:SS
+      - name: author
+        field:
+          element: "text"
+          label: "author"
+      - name: summary
+        field:
+          element: "text"
+          label: "summary"
+      - name: image
+        field:
+          element: "text"
+          label: cover image
+          placeholder: "example.jpg (upload image to img/events with the same name)"
+          value:
+      - name: category
+        field:
+          element: "text"
+          label: category
+          placeholder: "add only one category"
+          value:
+      - name: tag
+        field:
+          element: "text"
+          label: tag
+          placeholder: "add only one tag"
+          value: "events"
+    reports:
+      - name: layout
+        field:
+          element: "hidden"
+          label: "layout"
+          value: reports/post
+      - name: "published"
+        field:
+          element: 'hidden'
+          value: true
+      - name: title
+        field:
+          element: "text"
+          label: "title"
+      - name: date
+        field:
+          element: "text"
+          label: "date"
+          placeholder: YYYY-MM-DD HH:MM:SS
+      - name: author
+        field:
+          element: "text"
+          label: "author"
+      - name: summary
+        field:
+          element: "text"
+          label: "summary"
+      - name: image
+        field:
+          element: "text"
+          label: cover image
+          placeholder: "example.jpg (upload image to img/reports with the same name)"
+          value:
+      - name: category
+        field:
+          element: "text"
+          label: category
+          placeholder: "add only one category"
+          value:
