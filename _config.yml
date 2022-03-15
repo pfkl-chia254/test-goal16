@@ -9,7 +9,7 @@ url: "http://www.sdg16.org/"
 # baseurl: ''
 
 # Staging
-baseurl: '/goal16'
+baseurl: '/test-goal16'
 
 plugins: [jekyll-paginate]
 paginate: 25
