@@ -27,8 +27,8 @@ var DataView = Backbone.View.extend({
     this.targetsCollection = targetsCollection;
     this.indicatorsCollection = new IndicatorsCollection();
 
-    console.log('targetsCollection: ', this.targetsCollection);
-    console.log('indicatorsCollection: ', this.indicatorsCollection);
+    // console.log('targetsCollection: ', this.targetsCollection);
+    // console.log('indicatorsCollection: ', this.indicatorsCollection);
   },
 
   _setViews: function() {
