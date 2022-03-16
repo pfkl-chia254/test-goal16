@@ -8,9 +8,9 @@ _site
 .grunt
 *.log
 /node_modules
-/js/main_bundle.js
-js/main_bundle.js
-/css/main.css
-css/main.css
+# /js/main_bundle.js
+# js/main_bundle.js
+# /css/main.css
+# css/main.css
 _config_dev.yml
 # CNAME
